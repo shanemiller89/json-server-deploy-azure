@@ -2,13 +2,19 @@
 
 1. Git clone the following
 
+```bash
+git@github.com:shanemiller89/json-server-deploy-azure.git
 ```
 
+2. Copy and paste the content of your database into the db.json file in the newly created directory.
 
+3. Move on to Create the project.
 
 ## Create the project
 
-1 . [Create your database](#create-your-database)
+*Make sure you have created an account for azure [here](https://azure.microsoft.com/en-us/free/)*
+
+1 . Create your database
 
 2 . Create a resource group for your projects, replace the name to whatever you want just be sure to use the same group name in all commands to come. You only have to create the resource group and service plan once, then you can use the same group and plan for all other apps you create if you like.
 
