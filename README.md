@@ -16,7 +16,17 @@ git@github.com:shanemiller89/json-server-deploy-azure.git
 
 1 . Create your database
 
-2 . Create a resource group for your projects, replace the name to whatever you want just be sure to use the same group name in all commands to come. You only have to create the resource group and service plan once, then you can use the same group and plan for all other apps you create if you like.
+2. Install the Azure CLI (Insructions [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+
+3. Run this command:
+
+```
+az login
+```
+
+and follow the login procedure.
+
+3 . Create a resource group for your projects, replace the name to whatever you want just be sure to use the same group name in all commands to come. You only have to create the resource group and service plan once, then you can use the same group and plan for all other apps you create if you like.
 
 ```bash
 az group create -n NameOfResourceGroup -l northeurope
@@ -42,7 +52,7 @@ az webapp deployment source config-local-git -n NameOfApp -g NameOfResourceGroup
 6 . From the command in step 5 you should get a **url** in return. Copy this url and add it as a remote to your local git project, for example:
 
 ```bash
-git remote add azure https://jesperorb@deploy-testing.scm.azurewebsites.net/deploy-testing.git
+git remote add azure <returned url>
 ```
 
 7 . Now you should be able to push your app:
@@ -52,6 +62,6 @@ git push azure master
 
 You should be prompted to supply a password, this should be the pass to your account. If not, you can choose a different password at your Dashboard for Azure: **[https://portal.azure.com/](https://portal.azure.com/)**
 
-Choose **App Services** in the sidebar to the left and the choose your app in the list that appears then go to **Deployment Credentials** to change your password for deployment:<br>
+Choose **App Services** in the sidebar to the left and the choose your app in the list that appears then go to **Deployment Center**.<br>
 https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-credentials
 
