@@ -72,5 +72,5 @@ Choose **App Services** in the sidebar to the left and the choose your app in th
 https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-credentials
 
 
-Your JSON server should be up and running. The URL of your app, located in your dashboard under App Service, then select your app.
+Your JSON server should be up and running. The URL of your app is located in your dashboard under App Service, then select your app. Copy and paste the URL and replace with your localhost URL in your fetch callls.
 
