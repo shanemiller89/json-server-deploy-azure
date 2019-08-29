@@ -14,7 +14,7 @@ git@github.com:shanemiller89/json-server-deploy-azure.git
 
 *Make sure you have created an account for azure [here](https://azure.microsoft.com/en-us/free/)*
 
-1 . Create your database
+1 . Create your database (The first steps above)
 
 2 . Install the Azure CLI (Insructions [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest))
 
