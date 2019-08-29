@@ -55,7 +55,7 @@ az webapp create -n NameOfApp -g NameOfResourceGroup --plan NameOfServicePlan
 az webapp deployment source config-local-git -n NameOfApp -g NameOfResourceGroup
 ```
 
-9 . From the command in step 5 you should get a **url** in return. Copy this url and add it as a remote to your local git project, for example:
+9 . From the command in step 8 you should get a **url** in return. Copy this url and add it as a remote to your local git project, for example:
 
 ```bash
 git remote add azure <returned url>
@@ -66,7 +66,7 @@ git remote add azure <returned url>
 git push azure master
 ```
 
-You should be prompted to supply a password, this should be the pass to your account. If not, you can choose a different password at your Dashboard for Azure: **[https://portal.azure.com/](https://portal.azure.com/)**
+You should be prompted to supply a password, this should be the password of the deployment user and password you set in step 4. If not, you can choose a different password at your Dashboard for Azure: **[https://portal.azure.com/](https://portal.azure.com/)**
 
 Choose **App Services** in the sidebar to the left and the choose your app in the list that appears then go to **Deployment Center**. They select FTP/Credentials. Then select User Credentials and set a username and password. You may have to change the deployment user to the username you just created.<br>
 https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-credentials
