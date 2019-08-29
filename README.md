@@ -68,7 +68,7 @@ git push azure master
 
 You should be prompted to supply a password, this should be the password of the deployment user and password you set in step 4. If not, you can choose a different password at your Dashboard for Azure: **[https://portal.azure.com/](https://portal.azure.com/)**
 
-Choose **App Services** in the sidebar to the left and the choose your app in the list that appears then go to **Deployment Center**. They select FTP/Credentials. Then select User Credentials and set a username and password. You may have to change the deployment user to the username you just created.<br>
+Choose **App Services** in the sidebar to the left and the choose your app in the list that appears then go to **Deployment Center**. Then select **FTP/Credentials**. Then select **User Credentials** and set a username and password. You may have to change the deployment user to the username you just created.<br>
 https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-credentials
 
 
