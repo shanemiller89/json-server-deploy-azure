@@ -16,9 +16,9 @@ git@github.com:shanemiller89/json-server-deploy-azure.git
 
 1 . Create your database
 
-2. Install the Azure CLI (Insructions [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+2 . Install the Azure CLI (Insructions [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest))
 
-3. Run this command:
+3 . Run this command:
 
 ```
 az login
@@ -26,42 +26,51 @@ az login
 
 and follow the login procedure.
 
-3 . Create a resource group for your projects, replace the name to whatever you want just be sure to use the same group name in all commands to come. You only have to create the resource group and service plan once, then you can use the same group and plan for all other apps you create if you like.
+4 .Set the deployment username and password:
+
+```bash
+az webapp deployment user set --user-name <username> --password <password>
+```
+
+5 . Create a resource group for your projects, replace the name to whatever you want just be sure to use the same group name in all commands to come. You only have to create the resource group and service plan once, then you can use the same group and plan for all other apps you create if you like.
 
 ```bash
 az group create -n NameOfResourceGroup -l northeurope
 ```
 
-3 . Create a service plan:
+6 . Create a service plan:
 
 ```
 az appservice plan create -n NameOfServicePlan -g NameOfResourceGroup
 ```
 
-4 . Create the actual app and supply the service plan and resource group
+7 . Create the actual app and supply the service plan and resource group
 ```bash
 az webapp create -n NameOfApp -g NameOfResourceGroup --plan NameOfServicePlan
 ```
 
-5 . Create deployment details. A git-repo is not created automatically so we have to create it with a command:
+8 . Create deployment details. A git-repo is not created automatically so we have to create it with a command:
 
 ```bash
 az webapp deployment source config-local-git -n NameOfApp -g NameOfResourceGroup
 ```
 
-6 . From the command in step 5 you should get a **url** in return. Copy this url and add it as a remote to your local git project, for example:
+9 . From the command in step 5 you should get a **url** in return. Copy this url and add it as a remote to your local git project, for example:
 
 ```bash
 git remote add azure <returned url>
 ```
 
-7 . Now you should be able to push your app:
+10 . Now you should be able to push your app:
 ```bash
 git push azure master
 ```
 
 You should be prompted to supply a password, this should be the pass to your account. If not, you can choose a different password at your Dashboard for Azure: **[https://portal.azure.com/](https://portal.azure.com/)**
 
-Choose **App Services** in the sidebar to the left and the choose your app in the list that appears then go to **Deployment Center**.<br>
+Choose **App Services** in the sidebar to the left and the choose your app in the list that appears then go to **Deployment Center**. They select FTP/Credentials. Then select User Credentials and set a username and password. You may have to change the deployment user to the username you just created.<br>
 https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-credentials
+
+
+Your JSON server should be up and running. The URL of your app, located in your dashboard under App Service, then select your app.
 
