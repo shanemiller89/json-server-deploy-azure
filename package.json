@@ -11,7 +11,7 @@
     "node": ">=10.0.0"
   },
   "keywords": ["json-server,azure, node, REST API"],
-  "author": "Jesper Orb",
+  "author": "Jesper Orb, Refactor by Shane Miller",
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.12.1"
