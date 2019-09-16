@@ -74,5 +74,5 @@ https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-creden
 
 Your JSON server should be up and running. The URL of your app is located in your dashboard under App Service, then select your app. Copy and paste the URL and replace with your localhost URL in your fetch calls.
 
-***Note***: If you are using a service like Heroku, make sure your URL starts with https:// not http://. This is a work around and not a true fix. JSON server should only be used for testing purposes on a small scale deployment. Not a full scale deployment.
+***Note***: If you are using a service like Heroku, make sure your URL starts with `https://` not `http://`. This is a work around and not a true fix. JSON server should only be used for testing purposes on a small scale deployment. Not a full scale deployment.
 
